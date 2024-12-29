@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta-Bio | Yaşam Bilimleri</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-menu">
-                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#anasayfa" class="active">Anasayfa</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
                 <li><a href="#molekuler-diagnostik">Moleküler Diagnostik</a></li>
                 <li><a href="#yasam-bilimleri">Yaşam Bilimleri</a></li>
@@ -70,7 +77,7 @@
         </div>
     </section>
 
-    <section id="molekuler-diagnostik" class="work-section">
+    <section id="covid" class="work-section">
         <div class="work-content">
             <div class="work-text">
                 <h3>Covid-19</h3>
@@ -88,7 +95,7 @@
                 <p class="section-subtitle">Size sunduğumuz kapsamlı hizmetlerimizi keşfedin</p>
             </div>
 
-            <div class="service-category-section">
+            <section id="molekuler-diagnostik" class="service-category-section">
                 <h3><span>Moleküler</span> <span>Diagnostik</span></h3>
                 <div class="service-items">
                     <div class="service-item">
@@ -124,9 +131,9 @@
                         <a href="#" class="btn">DAHA FAZLA</a>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="service-category-section">
+            <section id="yasam-bilimleri" class="service-category-section">
                 <h3><span>Yaşam</span> <span>Bilimleri</span></h3>
                 <div class="service-items">
                     <div class="service-item">
@@ -156,12 +163,12 @@
                         <a href="#" class="btn">DAHA FAZLA</a>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </section>
 
     <!-- Haberler Bölümü -->
-    <section id="haberler" class="haberler-section">
+    <section id="biyoinformatik" class="haberler-section">
         <div class="haberler-container">
             <!-- Başlık Alanı -->
             <div class="haberler-baslik">
