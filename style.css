@@ -603,7 +603,7 @@ h2 {
 .work-section {
     position: relative;
     min-height: 600px;
-    background: url('../images/work-one.png');
+    background: url('./images/work_one.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -731,7 +731,7 @@ footer {
 .haberler-section {
     position: relative;
     padding: 80px 0;
-    background: url('../images/news-background.png') center/cover no-repeat;
+    background: url('./images/news-background.png') center/cover no-repeat;
     color: #fff;
 }
 
@@ -860,6 +860,10 @@ footer {
     
     .haberler-baslik h2 {
         font-size: 2rem;
+    }
+
+    .tum-haberler-btn {
+        width:70%;
     }
 }
 
