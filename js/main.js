@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Mobil menü toggle
-  const header = document.querySelector('header');
+  const header = document.querySelector("header");
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
   const body = document.body;
@@ -46,31 +46,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY + window.innerHeight / 2;
-        let current = '';
+    let current = "";
 
-        document.querySelectorAll("section").forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+    document.querySelectorAll("section").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
 
-            if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
-                current = section.getAttribute("id");
-            }
-        });
+      if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
 
-        // Header arka plan rengini güncelle
-        if (current === 'anasayfa' || current === '') {
-            header.classList.remove('page-header');
-        } else {
-            header.classList.add('page-header');
-        }
+    // Header arka plan rengini güncelle
+    if (current === "anasayfa" || current === "") {
+      header.classList.remove("page-header");
+    } else {
+      header.classList.add("page-header");
+    }
 
-        // Menü itemlarını güncelle
-        document.querySelectorAll("nav ul li a").forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-                link.classList.add("active");
-            }
-        });
+    // Menü itemlarını güncelle
+    document.querySelectorAll("nav ul li a").forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
   });
 
   if (window.location.hash && window.location.hash !== "#anasayfa") {
@@ -105,4 +105,47 @@ document.addEventListener("DOMContentLoaded", () => {
       body.style.overflow = "";
     }
   });
+
+  var swiper = new Swiper(".companies", {
+    loop: true,
+    freemode: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    allowTouchMove: false,
+    speed: 8000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: true
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+      },
+      800: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+      1300: {
+        slidesPerView: 5,
+      },
+      1921: {
+        slidesPerView: 8,
+      },
+    },
+  });
+
+  setTimeout(() => {
+    const swiperEl = document.querySelector(".companies");
+
+    swiperEl.addEventListener("mouseenter", () => {
+      swiper.autoplay.stop();
+    });
+
+    swiperEl.addEventListener("mouseleave", () => {
+      swiper.autoplay.start();
+    });
+  }, 5000);
 });

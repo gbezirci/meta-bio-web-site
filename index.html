@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo_icon.png" type="image/png">
     <title>Meta-Bio | Yaşam Bilimleri</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preload" href="assets/fonts/RocheSans-Regular.woff2" as="font" type="font/woff2">
 </head>
 
 <body>
@@ -22,15 +27,82 @@
             <ul class="nav-menu">
                 <li><a href="#anasayfa" class="active">Anasayfa</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <!-- <li><a href="#yasam-bilimleri">Yaşam Bilimleri</a></li> -->
+                <li class="dropdown">
+                    <a href="#yasam-bilimleri">Yaşam Bilimleri</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#hucre-biyolojisi">Hücre Biyolojisi</a></li>
+                        <li><a href="#proteomik">Proteomik</a></li>
+                        <li><a href="#genomik">Genomik</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#biyoinformatik">Hücre ve Gen Terapisi</a></li>
                 <li><a href="#molekuler-diagnostik">Moleküler Diagnostik</a></li>
-                <li><a href="#yasam-bilimleri">Yaşam Bilimleri</a></li>
-                <li><a href="#biyoinformatik">Biyoinformatik</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
     </header>
 
+
     <section id="anasayfa" class="hero">
+        <!-- Slider Wrapper -->
+        <!-- <div class="slider">
+          <div class="slide active" style="background-image: url('images/slide1.jpeg')"></div>
+          <div class="slide" style="background-image: url('images/slide2.avif')"></div>
+          <div class="slide" style="background-image: url('images/slide3.jpeg')"></div>
+        </div> -->
+
+        <!-- Slider main container -->
+        <swiper-container class="mySwiper" pagination="true" navigation="true" loop="true" pagination-clickable="true"  >
+            
+            <swiper-slide>
+                <img class="roche_sld_1" src="images/slider1_1.avif" alt="Slide 1">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="images/slide2.avif" alt="Slide 2">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="cytiva_sld" src="images/slide3_single.png" alt="Slide 3">
+            </swiper-slide>
+        </swiper-container>
+
+        <div class="swiper companies">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-content">
+                        <img src="images/companies/roche.svg" alt="Company 1">
+                        <span class="roche-font"> Life Science</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-content">
+                        <img src="images/companies/roche.svg" alt="Company 1">
+                        <span class="roche-font"> Custom Biotech</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-content">
+                        <img src="images/companies/roche.svg" alt="Company 1">
+                        <span class="roche-font"> Sequencing</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/companies/merck.png" alt="Company 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/companies/cytiva.svg" alt="Company 2">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/companies/horizon.svg" alt="Company 2" style="object-fit: none;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="anasayfa" class="hero">
         <div class="hero-content">
             <p class="hero-subtitle">ALIŞTIRMALARINIZ İÇİN GÜNCEL ÇÖZÜMLER</p>
             <h1>YAŞAM BİLİMLERİ</h1>
@@ -43,15 +115,17 @@
         <div class="hero-logo">
             <img src="images/logo.png" alt="Meta-Bio Logo">
         </div>
-    </section>
+    </section> -->
 
     <section id="hakkimizda" class="about">
         <div class="section-header">
             <h2>Hakkımızda</h2>
-            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="section-subtitle">
+                Metabio Yaşam Bilimleri, 2022 yılında Ankara merkezli olarak, sektördeki 15 yıllık deneyimimizi ve tecrübelerimizi, global çözüm ortaklarımızın ürün ve hizmet kalitesi ile birleştirerek çözümler üretmek için kuruldu.
+            </p>
         </div>
 
-        <div class="about-content">
+        <!-- <div class="about-content">
             <div class="about-text">
                 <div class="text-column">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tellus sapien, viverra vulputate dui in, luctus sagittis augue. Curabitur sed orci quam. Mauris iaculis mi at tincidunt condimentum.</p>
@@ -70,7 +144,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="section-logo">
             <img src="images/logo.png" alt="Meta-Bio Logo">
@@ -230,7 +304,9 @@
         <p>&copy; 2024 Meta-Bio. Tüm hakları saklıdır</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
